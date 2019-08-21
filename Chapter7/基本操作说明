@@ -1,0 +1,14 @@
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c ./startUp1.json
+以上命令在Chapter7下执行成功后，在浏览器中输入  http://127.0.0.1:8888/demo
+具体操作如下：
+ma@ma-MS-7972:~/eclipse-workspace/AutoTest/Chapter7$ java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c ./startUp1.json
+21 八月 2019 12:22:25 [main] INFO  Server is started at 8888
+21 八月 2019 12:22:25 [main] INFO  Shutdown port is 38593
+21 八月 2019 12:22:40 [nioEventLoopGroup-3-2] INFO  Request received:
+
+使用moco模拟post请求配置启动成功后不能直接在浏览器中打开，需要使用jmeter验证
+get请求携带参数使用 queries
+post请求携带参数使用 forms或json
+request 中的method不写默认为get
+response 中 返回结果类型可写 text ,json,status
+redirectTo时如指向外网网址前面必须写http://
