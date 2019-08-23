@@ -1,0 +1,24 @@
+参数说明  
+
+signCertIssuerDN        string类型  证书颁发者信息
+signCertSubjectDN       string类型  证书使用者信息
+signPDFName             string类型  签名版本名称
+signRevision               int类型  签名版本号
+signValid              boolean类型  判断数字证书是否过期后签名 true表明没有过期
+signModifyFail         boolean类型  签名数据是否有篡改 true表明没有篡改  
+signatureCovers        boolean类型  结果为true 为最后版本
+timestampDate           string类型  时间戳认证时间
+timestampFail          boolean类型  是否包含时间戳 true表明包含时间戳
+timestampValid         boolean类型  时间戳验证，true表明是联合信任颁发  
+timestampCertIssuerDN   string类型  时间戳颁发者信息 
+timestampCertSubjectDN  string类型  时间戳使用者信息
+
+
+使用说明：
+
+1 查询电子合同一共有几个签名版本：先判断电子合同有几个签名版本， 可以根据signRevision判断。
+2 判断是否最后为联合信任时间戳锁定：根据signatureCovers查找最后的签名版本，判断其是否包含联合信任的时间戳（timestampValid），若包含继续验证参数signValid 、signModifyFail是否都为true。     否则返回验证失败   ，提示错误信息 
+3 判断其它版本是否是否有效：   signValid 、signModifyFail都为true ，视为通过。注增加一个白名单列表signValid为false的情况 ，若为false  判断timestampValid==true  、 signCertSubjectDN = 固定值、signCertIssuerDN = 固定值，视为signValid为true。否则返回验证失败   ，提示错误信息  
+4 返回相应的显示值，   若1、2、3都有效， 表明验证通过，    返回页面所有 timestampValid 为true 的签名版本信息。 
+
+
