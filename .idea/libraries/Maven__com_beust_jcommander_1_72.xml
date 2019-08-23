@@ -1,13 +1,23 @@
 <component name="libraryTable">
   <library name="Maven: com.beust:jcommander:1.72">
+    <ANNOTATIONS>
+      <root url="file://$MAVEN_REPOSITORY$" />
+    </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72.jar!/" />
     </CLASSES>
     <JAVADOC>
+      <root url="file://$MAVEN_REPOSITORY$" />
       <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72-javadoc.jar!/" />
     </JAVADOC>
+    <NATIVE>
+      <root url="file://$MAVEN_REPOSITORY$" />
+    </NATIVE>
     <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.47/fastjson-1.2.47-sources.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$" />
       <root url="jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.72/jcommander-1.72-sources.jar!/" />
     </SOURCES>
+    <jarDirectory url="file://$MAVEN_REPOSITORY$" recursive="false" type="SOURCES" />
   </library>
 </component>
