@@ -9,12 +9,12 @@ import com.tsa.ra.utils.OperationExcel;
 public class DealCaseData {
     public static ResourceBundle bundle;//解析配置文件使用
     public static OperationExcel oExcel = new OperationExcel();
-    public static List<String> getParamEnName(int paramRowNum,int paramColNum) throws IOException {
+    public static List<String> getParamEnName(String filepath,int sheetid, int paramRowNum,int paramColNum) throws IOException {
         /**
          * paramRowNum:表示指定excel表中参数名所在行号（0表示第一行）
          * paramColNum:表示指定excel表中参数名开始的列号（0表示第一列）
          * */
-        Object[][] alldata = oExcel.readExData("/home/ma/eclipse-workspace/AutoTest/ra/src/main/java/com/tsa/ra/casefile/ra_case.xlsx",3);
+        Object[][] alldata = oExcel.readExData(filepath,sheetid);
         List<String> caseParamNameList=new ArrayList<String>();
         
         for(int j=paramColNum;j<alldata[paramRowNum].length;j++){
@@ -27,12 +27,12 @@ public class DealCaseData {
         return caseParamNameList;
     }
 
-    public static List<Object> getParamValue(int paramRowNumStart,int paramColNum) throws IOException {
+    public static List<Object> getParamValue(String filepath,int sheetid,int paramRowNumStart,int paramColNum) throws IOException {
         /**
          * paramRowNumStart:表示指定excel表中参数值所在行号（0表示第一行）
          * paramColNum:表示指定excel表中参数值开始的列号（0表示第一列）
          * */
-        Object[][] alldata = oExcel.readExData("/home/ma/eclipse-workspace/AutoTest/ra/src/main/java/com/tsa/ra/casefile/ra_case.xlsx",3);
+        Object[][] alldata = oExcel.readExData(filepath,sheetid);
         List<Object> caseAllParamValueList=new ArrayList<Object>();
         //List<List<String>> caseAllParamValueList=new ArrayList<List<String>>();
         for(int i=paramRowNumStart;i<alldata.length;i++){
@@ -48,13 +48,13 @@ public class DealCaseData {
         return caseAllParamValueList;
     }
 
-    public static List<List<String>> getParamValue(int paramRowNumStart,int paramColNum,int isRunNum) throws IOException {
+    public static List<List<String>> getParamValue(String filepath,int sheetid,int paramRowNumStart,int paramColNum,int isRunNum) throws IOException {
         /**
          * paramRowNumStart:表示指定excel表中参数值所在行号（0表示第一行）
          * paramColNum:表示指定excel表中参数值开始的列号（0表示第一列）
          * isRunNum:表示是否运行标志的所在列号（0表示第一列）
          * */
-        Object[][] alldata = oExcel.readExData("/home/ma/eclipse-workspace/AutoTest/ra/src/main/java/com/tsa/ra/casefile/ra_case.xlsx",3);
+        Object[][] alldata = oExcel.readExData(filepath,sheetid);
         //List<Object> caseAllParamValueList=new ArrayList<Object>();
         List<List<String>> caseAllParamValueList=new ArrayList<List<String>>();
         for(int i=paramRowNumStart;i<alldata.length;i++){
@@ -75,14 +75,14 @@ public class DealCaseData {
     }
 
     
-    public static List<Object> getParamValue(int paramRowNumStart,int paramRowNumEnd,int paramColNum,int isRunNum) throws IOException {
+    public static List<Object> getParamValue(String filepath,int sheetid,int paramRowNumStart,int paramRowNumEnd,int paramColNum,int isRunNum) throws IOException {
         /**
          * paramRowNumStart:表示指定excel表中参数值所在行号（0表示第一行）
          * paramRowNumEnd:表示指定excel表中参数值结束行号（0表示第一行）
          * paramColNum:表示指定excel表中参数值开始的列号（0表示第一列）
          * isRunNum:表示是否运行标志的所在列号（0表示第一列）
          * */
-        Object[][] alldata = oExcel.readExData("/home/ma/eclipse-workspace/AutoTest/ra/src/main/java/com/tsa/ra/casefile/ra_case.xlsx",3);
+        Object[][] alldata = oExcel.readExData(filepath,sheetid);
         //List<List<String>> caseAllParamValueList=new ArrayList<List<String>>();
         List<Object> caseAllParamValueList=new ArrayList<Object>();
         int endNum;
@@ -104,14 +104,14 @@ public class DealCaseData {
             }
           //  System.out.println(caseParamValueList);
         }
-        System.out.println(caseAllParamValueList);
+//        System.out.println(caseAllParamValueList);
         return caseAllParamValueList;
     }
 
     public static void main(String[] args) throws IOException {
-        getParamEnName(0,7);
-        getParamValue(1,7);
-        getParamValue(1,7,0);
-        getParamValue(1,3,7,0);
+//        getParamEnName(0,7);
+//        getParamValue(1,7);
+//        getParamValue(1,7,0);
+//        getParamValue(1,3,7,0);
     }
 }

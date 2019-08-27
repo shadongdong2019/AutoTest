@@ -22,6 +22,7 @@ public class GetMapParam {
 	}
 	public GetMapParam(String filename) {
 		this.filename = filename;
+		this.sheetid = 0;
 	}
 	public GetMapParam(String filename,int sheetid) {
 		this.filename = filename;
@@ -34,8 +35,11 @@ public class GetMapParam {
     }
     public  List<Map<String,String>> getParamKeyValue(int paramStartRowNum,int paramEndRowNum,int paramStartColNum,int paramIsrunColNum) throws IOException{
     	List<Map<String,String>> caseList = new ArrayList<Map<String,String>>();
-    	List<String> paramNameList= dCaseData.getParamEnName(paramStartRowNum, paramStartColNum);
-    	List<List<String>> paramValueList= dCaseData.getParamValue(paramStartRowNum+1,paramStartColNum,paramIsrunColNum);
+    	List<String> paramNameList= dCaseData.getParamEnName(this.filename,this.sheetid,paramStartRowNum, paramStartColNum);
+    	List<List<String>> paramValueList= dCaseData.getParamValue(this.filename,this.sheetid,paramStartRowNum+1,paramStartColNum,paramIsrunColNum);
+//    	System.out.println("paramStartRowNum+1:"+paramStartRowNum+1);
+//    	System.out.println("paramStartColNum:"+paramStartColNum);
+//    	System.out.println("paramIsrunColNum:"+paramIsrunColNum);
     	int keyLen = (paramNameList != null) ? paramNameList.size() : 0;
     	for(List<String> paramValue:paramValueList){
     		Map<String,String> param = new  LinkedHashMap<String, String>();

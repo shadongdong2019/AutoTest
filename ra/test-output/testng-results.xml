@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="我自己的接口测试套件" duration-ms="1993" started-at="2019-08-23T18:16:46 CST" finished-at="2019-08-23T18:16:47 CST">
+  <suite name="我自己的接口测试套件" duration-ms="2073" started-at="2019-08-27T18:16:13 CST" finished-at="2019-08-27T18:16:15 CST">
     <groups>
     </groups>
-    <test name="这些是测试模块" duration-ms="1993" started-at="2019-08-23T18:16:46 CST" finished-at="2019-08-23T18:16:47 CST">
+    <test name="这些是测试模块" duration-ms="2073" started-at="2019-08-27T18:16:13 CST" finished-at="2019-08-27T18:16:15 CST">
       <class name="com.tsa.ra.testcase.RaTestCase">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.tsa.ra.testcase.RaTestCase@1dfe2924]" name="beforeTest" is-config="true" duration-ms="8" started-at="2019-08-23T18:16:46 CST" finished-at="2019-08-23T18:16:46 CST">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.tsa.ra.testcase.RaTestCase@5bc7e78e]" name="beforeTest" is-config="true" duration-ms="15" started-at="2019-08-27T18:16:13 CST" finished-at="2019-08-27T18:16:13 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.tsa.ra.testcase.RaTestCase@1dfe2924]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-08-23T18:16:46 CST" finished-at="2019-08-23T18:16:46 CST">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.tsa.ra.testcase.RaTestCase@5bc7e78e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-08-27T18:16:13 CST" finished-at="2019-08-27T18:16:13 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="caTest(java.util.Map)[pri:0, instance:com.tsa.ra.testcase.RaTestCase@1dfe2924]" name="caTest" duration-ms="1350" started-at="2019-08-23T18:16:46 CST" data-provider="ra_ca_data" finished-at="2019-08-23T18:16:47 CST">
+        <test-method status="PASS" signature="caTest(java.util.Map)[pri:0, instance:com.tsa.ra.testcase.RaTestCase@5bc7e78e]" name="caTest" duration-ms="1129" started-at="2019-08-27T18:16:14 CST" data-provider="ra_ca_data" finished-at="2019-08-27T18:16:15 CST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=111222, username=北京技术服务有限公司, subject=o=北京技术服务有限公司,ou=测试专用,cn=23464567575675634XEs-北京技术服务有限公司, period=1, periodType=month, cardType=身份证, cardNumber=23464567575675634XEs, email=tsa@tsa.cn}]]>
+                <![CDATA[{password=111222, username=北京技术服务有限公司, period=1, periodType=year, cardType=0, cardNumber=110111198805131234, email=tsa@tsa.cn}]]>
               </value>
             </param>
           </params>

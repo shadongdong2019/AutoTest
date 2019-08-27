@@ -17,10 +17,12 @@ public class ExcelDataHeleper {
 	public  String excelPath =  ReadPropertiesParam.excelPath;
 	public  int excelSheetId = ReadPropertiesParam.excelSheetId;
     GetMapParam getMapParam = new GetMapParam(excelPath,excelSheetId);
+
     
     @DataProvider(name="ra_ca_data")
     public Object[][] dataMethod() throws Exception{
-        System.out.println(paramStartColNum);
+    	System.out.println("excelSheetId:"+excelSheetId);
+        System.out.println("paramStartColNum:"+paramStartColNum);
         List<Map<String, String>> paramList = getMapParam.getParamKeyValue(paramStartRowNum,paramEndRowNum,paramStartColNum,paramIsrunColNum);
         Object[][] caseArray = new Object[paramList.size()][];
         for(int i=0; i<paramList.size(); i++){

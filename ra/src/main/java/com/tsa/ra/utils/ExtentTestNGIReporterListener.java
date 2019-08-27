@@ -305,8 +305,8 @@ package com.tsa.ra.utils;
             //怎么解决cdn.rawqit.com访问不了的情况
             htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
     
-            htmlReporter.config().setDocumentTitle("api自动化测试报告");
-            htmlReporter.config().setReportName("api自动化测试报告");
+            htmlReporter.config().setDocumentTitle("自动化测试报告");
+            htmlReporter.config().setReportName("自动化测试报告");
             htmlReporter.config().setChartVisibilityOnOpen(true);
             htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
             htmlReporter.config().setTheme(Theme.STANDARD);
