@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [我自己的接口测试套件]">
   <listeners>
-    <listener class-name="com.tsa.ra.utils.ExtentTestNGIReporterListener"/>
+    <listener class-name="com.tsa.extentreportdemo.listener.MyExtentTestNgFormatter"/>
   </listeners>
   <test thread-count="5" name="这些是测试模块(failed)">
     <classes>

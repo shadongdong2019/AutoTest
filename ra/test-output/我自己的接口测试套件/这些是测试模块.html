@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 27 18:16:13 CST 2019</td>
+<td>Started on:</td><td>Wed Aug 28 16:41:09 CST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2073 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2612 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.tsa.ra.testcase.RaTestCase.caTest()'><b>caTest</b><br>Test class: com.tsa.ra.testcase.RaTestCase<br>Parameters: {password=111222, username=北京技术服务有限公司, period=1, periodType=year, cardType=0, cardNumber=110111198805131234, email=tsa@tsa.cn}</td>
+<td title='com.tsa.ra.testcase.RaTestCase.caTest()'><b>caTest</b><br>Test class: com.tsa.ra.testcase.RaTestCase<br>Parameters: {pin=a3dedfc80ac3aaf75330aeb6a6d0e51f, password=ssssssss, username=北京技术服务有限公司01, period=31, periodType=day, cardType=B, cardNumber=H12345678}<br/>
+<a href="#Output-1059634518" onClick='toggleBox("Output-1059634518", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1059634518" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1059634518">
+用例编号=CFCA_009<br/>
+测试目的=申请失败<br/>
+用例描述=必填参数periodType-day,period为31<br/>
+接口请求地址=http://47.93.11.109:8088/service/CfcaCertAPI<br/>
+请求参数={pin=a3dedfc80ac3aaf75330aeb6a6d0e51f, password=ssssssss, username=北京技术服务有限公司01, period=31, periodType=day, cardType=B, cardNumber=H12345678}<br/>
+预期结果=false_"code":"0"<br/>
+响应结果={"code":"1","param":"{\"code\":\"1\",\"msg\":\"[period,periodType] error. param\\u003d[key\\u003d0096d530b10a8b3dcf2ab1b6fd2e9c2b,param\\u003d{\\\"pin\\\":\\\"a3dedfc80ac3aaf75330aeb6a6d0e51f\\\",\\\"password\\\":\\\"ssssssss\\\",\\\"username\\\":\\\"北京技术服务有限公司01\\\",\\\"period\\\":\\\"31\\\",\\\"periodType\\\":\\\"day\\\",\\\"cardType\\\":\\\"B\\\",\\\"cardNumber\\\":\\\"H12345678\\\"},sign\\u003dd1d8b6c329846a4a89455b1baf8df493]\"}","sign":"be296c907c2bc24d4bf9a1c13188c669"}<br/>
+</div>
+</td>
 <td></td>
 <td>1</td>
-<td>com.tsa.ra.testcase.RaTestCase@5bc7e78e</td></tr>
+<td>com.tsa.ra.testcase.RaTestCase@6d3af739</td></tr>
 </table><p>
 </body>
 </html>

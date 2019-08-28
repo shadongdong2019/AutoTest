@@ -10,12 +10,13 @@ import com.tsa.ra.dealdata.GetMapParam;
 
 import cn.tsa.*;
 public class RaInterfaceDeal {
-	 public static String url = ReadPropertiesParam.url;
-	 public static int paramStartRowNum = ReadPropertiesParam.paramStartRowNum;
-	 public static int paramEndRowNum = ReadPropertiesParam.paramEndRowNum;
-	 public static int paramStartColNum = ReadPropertiesParam.paramStartColNum;
-	 public static int paramIsrunColNum = ReadPropertiesParam.paramIsrunColNum;
-	 public static void calledRaInterface() throws IOException, NoSuchAlgorithmException{
+	 ReadPropertiesParam rp = new ReadPropertiesParam("ca");
+	 public  String url = rp.url;
+	 public  int paramStartRowNum = rp.paramStartRowNum;
+	 public  int paramEndRowNum = rp.paramEndRowNum;
+	 public  int paramStartColNum = rp.paramStartColNum;
+	 public  int paramIsrunColNum = rp.paramIsrunColNum;
+	 public  void calledRaInterface() throws IOException, NoSuchAlgorithmException{
 		 //		 Object object_str = Class.forName(className).newInstance(); 
 		 //		 object_str.
 
@@ -28,6 +29,6 @@ public class RaInterfaceDeal {
 	 }
 
 	public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
-		calledRaInterface();
+		//calledRaInterface();
 	}
 }

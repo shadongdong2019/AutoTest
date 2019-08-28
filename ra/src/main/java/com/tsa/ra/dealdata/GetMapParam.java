@@ -52,7 +52,11 @@ public class GetMapParam {
 	    	// 保存到Map中, for循环遍历效率较高
 	    	for(int i=0; i<len; i++) {
 	    		if(paramValue.get(i) != null && paramValue.get(i) !="" ) {
-	    			param.put(paramNameList.get(i), paramValue.get(i));
+	    			if(paramValue.get(i).equals("空")) {
+	    				param.put(paramNameList.get(i), "");
+	    			}else {
+	    				param.put(paramNameList.get(i), paramValue.get(i));
+	    			}
 	    		}
 	    	}
 	    	if(param.size()>0) {

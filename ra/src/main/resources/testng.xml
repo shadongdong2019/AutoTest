@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="我自己的接口测试套件">
-    <test name="这些是测试模块">
+<suite name="CFCA接口测试用例">
+    <test name="说明：1 预期结果前面显法false_表示预期结果不是后面的值;2 用例描述中显示值为空时，表示参数值为空字符串">
         <classes>
             <class name="com.tsa.ra.testcase.RaTestCase">
                 <methods>
@@ -12,6 +12,6 @@
     <listeners>
 <!--        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
 <!--        <listener class-name="com.tester.extend.demo.ExtentTestNGIReporterListenerOld"/>-->
-        <listener class-name="com.tsa.ra.utils.ExtentTestNGIReporterListener"/>
+        <listener class-name="com.tsa.extentreportdemo.listener.MyExtentTestNgFormatter"/>
     </listeners>
 </suite>

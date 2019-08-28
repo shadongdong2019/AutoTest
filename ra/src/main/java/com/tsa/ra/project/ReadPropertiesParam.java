@@ -5,16 +5,22 @@ import java.util.ResourceBundle;
 
 public class ReadPropertiesParam {
 	//解析配置文件使用
-	 public static ResourceBundle bundle = ResourceBundle.getBundle("ra", Locale.CHINA);
-	 public static String url = bundle.getString("test.ra.url");
-	 public static String className = bundle.getString("test.ra.ca_class");
-	 public static String methodName = bundle.getString("test.ra.ca_class_method");
-	 public static int paramStartRowNum = Integer.parseInt(bundle.getString("test.ra.param.start.row"));
-	 public static int paramEndRowNum = Integer.parseInt(bundle.getString("test.ra.param.end.row"));
-	 public static int paramStartColNum = Integer.parseInt(bundle.getString("test.ra.param.start.col"));
-	 public static int paramIsrunColNum = Integer.parseInt(bundle.getString("test.ra.param.isrun.col"));
-	 public static String excelPath = bundle.getString("test.ra.excel.path");
-	 public static int excelSheetId = Integer.parseInt(bundle.getString("test.ra.excel.sheetid"));
+	 String filename;
+
+	 public ReadPropertiesParam(String filename) {
+		// TODO Auto-generated constructor stub
+		 this.filename = filename;
+	}
+	public  ResourceBundle bundle = ResourceBundle.getBundle(filename, Locale.CHINA);
+	 public  String url = bundle.getString("test.ra.url");
+	 public  String className = bundle.getString("test.ra.ca_class");
+	 public  String methodName = bundle.getString("test.ra.ca_class_method");
+	 public  int paramStartRowNum = Integer.parseInt(bundle.getString("test.ra.param.start.row"));
+	 public  int paramEndRowNum = Integer.parseInt(bundle.getString("test.ra.param.end.row"));
+	 public  int paramStartColNum = Integer.parseInt(bundle.getString("test.ra.param.start.col"));
+	 public  int paramIsrunColNum = Integer.parseInt(bundle.getString("test.ra.param.isrun.col"));
+	 public  String excelPath = bundle.getString("test.ra.excel.path");
+	 public  int excelSheetId = Integer.parseInt(bundle.getString("test.ra.excel.sheetid"));
 //	 public static void dealPropertiesParam() {
 //		 try {
 //			 paramStartRowNum = Integer.parseInt(bundle.getString("test.ra.param.start.row"));

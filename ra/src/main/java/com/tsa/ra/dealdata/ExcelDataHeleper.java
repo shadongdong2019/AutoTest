@@ -9,13 +9,14 @@ import org.testng.annotations.DataProvider;
 import com.tsa.ra.project.ReadPropertiesParam;
 
 public class ExcelDataHeleper {
-	public  static String url =  ReadPropertiesParam.url;
-	public  int paramStartRowNum = ReadPropertiesParam.paramStartRowNum;
-	public  int paramEndRowNum = ReadPropertiesParam.paramEndRowNum;
-	public  int paramStartColNum = ReadPropertiesParam.paramStartColNum;
-	public  int paramIsrunColNum = ReadPropertiesParam.paramIsrunColNum;
-	public  String excelPath =  ReadPropertiesParam.excelPath;
-	public  int excelSheetId = ReadPropertiesParam.excelSheetId;
+	ReadPropertiesParam rp = new ReadPropertiesParam("ca");
+	public  String url =  rp.url;
+	public  int paramStartRowNum = rp.paramStartRowNum;
+	public  int paramEndRowNum = rp.paramEndRowNum;
+	public  int paramStartColNum = rp.paramStartColNum;
+	public  int paramIsrunColNum = rp.paramIsrunColNum;
+	public  String excelPath =  rp.excelPath;
+	public  int excelSheetId = rp.excelSheetId;
     GetMapParam getMapParam = new GetMapParam(excelPath,excelSheetId);
 
     

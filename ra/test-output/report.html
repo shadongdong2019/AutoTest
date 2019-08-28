@@ -15,11 +15,8 @@
 
 		<link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>api自动化测试报告</title>
+	<title>ExtentReports</title>
 
-	<style type='text/css'>
-		.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
-	</style>
 </head>
 
 	<body class='extent standard default hide-overflow '>
@@ -38,7 +35,7 @@
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>api自动化测试报告</span>
+		<span class='report-name'>ExtentReports</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -47,7 +44,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 27, 2019 06:16:14 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Aug 28, 2019 04:59:40 PM</span>
 				</a>
 			</li>
 			<li>
@@ -138,10 +135,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='12.5%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='87.5%'>7</span> others
 				</div>
 			</div>
 		</div>
@@ -156,36 +153,114 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>{password=111222, username=北京技术服务有限公司, period=1, ...</span>
-						<span class='test-time'>Aug 27, 2019 06:16:14 PM</span>
+						<span class='test-name'>CFCA接口测试用例</span>
+						<span class='test-time'>Aug 28, 2019 04:59:40 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 27, 2019 06:16:14 PM</span>
-	<span class='label end-time'>Aug 27, 2019 06:16:15 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+129ms</span>
+	<span class='label start-time'>Aug 28, 2019 04:59:40 PM</span>
+	<span class='label end-time'>Aug 28, 2019 04:59:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+871ms</span>
 </div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:16:16 PM</td>
-					<td class='step-details'>Test passed</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1  pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>说明：预期结果前面显法false_表示预期结果不是后面的值</div>						
+						<span class='node-time'>Aug 28, 2019 04:59:40 PM</span>
+						<span class='node-duration'>0h 0m 3s+863ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>Passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>caTest</div>						
+						<span class='node-time'>Aug 28, 2019 04:59:41 PM</span>
+						<span class='node-duration'>0h 0m 3s+212ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>用例编号=CFCA_110</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>测试目的=申请失败</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>用例描述=必填参数username值为空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>接口请求地址=http://47.93.11.109:8088/service/CfcaCertAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>请求参数={pin=a3dedfc80ac3aaf75330aeb6a6d0e51f, password=111111, username=, period=1, periodType=year, cardType=N, cardNumber=110111198805131234, email=tsa@tsa.cn}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>预期结果=false_"code":"0"</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>响应结果={"code":"2001","param":"{\"code\":\"2001\",\"msg\":\"用户名不能为空\"}","sign":"948d054035060b08a1b8bbbc14b5ff52"}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:59:44 PM</td>
+													<td class='step-details'>Passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+	</ul>
 					</div>
 				</li>
 			</ul>
@@ -229,25 +304,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 27, 2019 06:16:14 PM</div>
+					<div class='panel-lead'>Aug 28, 2019 04:59:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 27, 2019 06:16:15 PM</div>
+			 		<div class='panel-lead'>Aug 28, 2019 04:59:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>1,129ms</div>
+					<div class='panel-lead'>4,007ms</div>
 				</div>
 			</div>
 		</div>
@@ -274,7 +349,7 @@
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 0,
+				infoChild: 7,
 				exceptionsChild: 0,
 				
 				passGrandChild: 0,

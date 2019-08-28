@@ -19,7 +19,7 @@
       <module name="Chapter5" target="1.5" />
       <module name="Chapter6" target="6" />
       <module name="Chapter9" target="1.5" />
-      <module name="ra" target="6" />
+      <module name="ra" target="7" />
       <module name="rademo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
