@@ -29,8 +29,8 @@ public class RaTestCase {
 	@Test(dataProvider="ra_ca_data",dataProviderClass= ExcelDataHeleper.class)
 	public void caTest(Map<String,String> param) throws Exception {
 		String url =callCaInterface();
-    	//CertAPIDemo cert = new CertAPIDemo();
-		CfcaCertAPIDemo cert = new CfcaCertAPIDemo();
+    	CertAPIDemo cert = new CertAPIDemo();
+		//CfcaCertAPIDemo cert = new CfcaCertAPIDemo();
 		String IsRun = "";
 		String CaseID = "";
 		String TestTarget = "";
@@ -62,7 +62,7 @@ public class RaTestCase {
 
     	String resString = cert.certApiDemo(param, url);
     	Log.info(resString);
-    	
+
     	Reporter.log("用例编号="+CaseID);
     	Reporter.log("测试目的="+TestTarget);
     	Reporter.log("用例描述="+CaseDesc);
@@ -81,7 +81,7 @@ public class RaTestCase {
 		}
 
 		//Assert.assertNotEquals("", resString);
-		TimeUnit.SECONDS.sleep(1);//秒
+	//	TimeUnit.SECONDS.sleep(5);//秒
 	}
 	
 	public String callCaInterface() throws Exception {

@@ -1,0 +1,59 @@
+[33mcommit 4a1fcf8bf307d6f8b61a482e341d579340816eea[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: ma <270002181@qq.com>
+Date:   Wed Aug 28 18:10:11 2019 +0800
+
+    RA接口测试用例完成
+
+[33mcommit d1f1232be0e7cf8892b4da84b2f0a40ee29cf232[m
+Author: ma <270002181@qq.com>
+Date:   Tue Aug 27 18:31:36 2019 +0800
+
+    ExtentReport测试报告
+
+[33mcommit c24dad1cf01d2641b2c7ee6465602ab7d44d44d9[m
+Author: ma <270002181@qq.com>
+Date:   Fri Aug 23 18:22:51 2019 +0800
+
+    加入ra项目
+
+[33mcommit 6e78279d1bf5796e3ef4db49fa0d4db78f63763f[m
+Author: ma <270002181@qq.com>
+Date:   Fri Aug 23 18:13:09 2019 +0800
+
+    dd
+
+[33mcommit 4fea9742450f0a3195e034d3ef23018863fd614b[m
+Author: ma <270002181@qq.com>
+Date:   Fri Aug 23 18:11:16 2019 +0800
+
+    测试报告样式与包冲突问题
+
+[33mcommit 155898f3e1322590293be38025cc2e9bf78c83cd[m
+Author: ma <270002181@qq.com>
+Date:   Thu Aug 22 18:55:06 2019 +0800
+
+    excel测试用例解析
+
+[33mcommit df271dc7a0940695bf405bcc148449e394571468[m
+Author: ma <270002181@qq.com>
+Date:   Wed Aug 21 18:21:02 2019 +0800
+
+    增加sprintboot
+
+[33mcommit 97b22ffbda91fb8d662afd2fc90588351552e550[m
+Author: ma <270002181@qq.com>
+Date:   Tue Aug 20 18:07:07 2019 +0800
+
+    java接口自动化测试
+
+[33mcommit 33f54a093127abb591c43b86ee9cf6cb15fcb65e[m
+Author: ma <270002181@qq.com>
+Date:   Tue Aug 20 15:34:01 2019 +0800
+
+    增加文本内容
+
+[33mcommit 1ffef41a2b0c197270674562f4c544a1eb265d3f[m
+Author: ma <270002181@qq.com>
+Date:   Tue Aug 20 15:10:15 2019 +0800
+
+    增加测试文件

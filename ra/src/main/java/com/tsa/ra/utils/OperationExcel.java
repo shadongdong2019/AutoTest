@@ -171,6 +171,7 @@ public class OperationExcel {
     public static Object[][] readExData(String filePath,int sheetId) throws IOException{
         //根据路径创建File类对象--这里路径即使错误也不会报错，因为只是产生File对象，还并未与计算机文件读写有关联
         File file = new File(filePath);
+    	//File file = new File("/home/ma/eclipse-workspace/AutoTest/ra/src/main/java/com/tsa/ra/casefile/ra_case.xlsx");
         FileInputStream fis;
         try
         {

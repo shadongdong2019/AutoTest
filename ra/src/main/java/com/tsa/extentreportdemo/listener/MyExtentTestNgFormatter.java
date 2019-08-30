@@ -135,6 +135,7 @@ public class MyExtentTestNgFormatter extends ExtentTestNgFormatter {
 
 
     public void onTestStart(ITestResult iTestResult) {
+    	System.out.println("getName():"+iTestResult.getName());
         MyReporter.setTestName(iTestResult.getName());
     }
 
