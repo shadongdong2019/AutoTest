@@ -17,7 +17,7 @@ import com.tsa.ra.log.Log;
 import cn.tsa.CertAPIDemo;
 import cn.tsa.certapi.webservice.cfca.CfcaCertAPIDemo;
 public class RaTestCase {
-	String[] removeArray = new String[]{"IsRun","CaseID","TestTarget","CaseDesc","ExpectRes","ExpectValue","ResultValue","IsPass"};
+	String[] removeArray = new String[]{"IsRun","TestTarget","CaseDesc","ExpectRes","ExpectValue","ResultValue","IsPass"};
 	
     @BeforeClass
 	public void beforeClass() throws Exception{
@@ -39,6 +39,7 @@ public class RaTestCase {
 		String ExpectValue = "";
 		String ResultValue = "";
 		String IsPass = "";
+		String PIN = "";
 		for(String s:removeArray) {
 			if(s.equals("IsRun")) {
 				IsRun = param.get(s);
@@ -59,7 +60,8 @@ public class RaTestCase {
 			}
 			param.remove(s);
 		}
-
+		CaseID = param.get("CaseID");
+		PIN = param.get("pin");
     	String resString = cert.certApiDemo(param, url);
     	Log.info(resString);
 
@@ -67,6 +69,7 @@ public class RaTestCase {
     	Reporter.log("测试目的="+TestTarget);
     	Reporter.log("用例描述="+CaseDesc);
     	Reporter.log("接口请求地址="+url);
+    	Reporter.log("PIN码="+PIN);
 		Reporter.log("请求参数="+param.toString());
 		Reporter.log("预期结果="+ExpectValue);
 		Reporter.log("响应结果="+resString);

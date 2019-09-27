@@ -11,8 +11,10 @@ import com.tsa.ra.project.ReadPropertiesParam;
 public class ExcelDataHeleper {
 	//ReadPropertiesParam rp = new ReadPropertiesParam("ra");
 	public static String url =  ReadPropertiesParam.url;
-	public static int paramStartRowNum = ReadPropertiesParam.paramStartRowNum;
-	public static int paramEndRowNum = ReadPropertiesParam.paramEndRowNum;
+	public static int paramNameStartRowNum = ReadPropertiesParam.paramNameStartRowNum;
+	public static int paramNameEndRowNum = ReadPropertiesParam.paramNameEndRowNum;
+	public static int paramValueStartRowNum = ReadPropertiesParam.paramValueStartRowNum;
+	public static int paramValuEndRowNum = ReadPropertiesParam.paramValuEndRowNum;
 	public static int paramStartColNum = ReadPropertiesParam.paramStartColNum;
 	public static int paramIsrunColNum = ReadPropertiesParam.paramIsrunColNum;
 	public static String excelPath =  ReadPropertiesParam.excelPath;
@@ -24,7 +26,7 @@ public class ExcelDataHeleper {
     public Object[][] dataMethod() throws Exception{
     	System.out.println("excelSheetId:"+excelSheetId);
         System.out.println("paramStartColNum:"+paramStartColNum);
-        List<Map<String, String>> paramList = getMapParam.getParamKeyValue(paramStartRowNum,paramEndRowNum,paramStartColNum,paramIsrunColNum);
+        List<Map<String, String>> paramList = getMapParam.getParamKeyValue(paramNameStartRowNum,paramNameEndRowNum,paramValueStartRowNum,paramValuEndRowNum,paramStartColNum,paramIsrunColNum);
         Object[][] caseArray = new Object[paramList.size()][];
         for(int i=0; i<paramList.size(); i++){
         	caseArray[i] = new Object[]{paramList.get(i)};

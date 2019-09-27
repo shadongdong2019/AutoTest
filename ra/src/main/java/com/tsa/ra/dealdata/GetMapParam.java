@@ -33,10 +33,10 @@ public class GetMapParam {
     	Map<String,String> param = new  HashMap<String, String>();
     	return param;
     }
-    public  List<Map<String,String>> getParamKeyValue(int paramStartRowNum,int paramEndRowNum,int paramStartColNum,int paramIsrunColNum) throws IOException{
+    public  List<Map<String,String>> getParamKeyValue(int paramNameStartRowNum,int paramNameEndRowNum,int paramValueStartRowNum,int paramValueEndRowNum,int paramStartColNum,int paramIsrunColNum) throws IOException{
     	List<Map<String,String>> caseList = new ArrayList<Map<String,String>>();
-    	List<String> paramNameList= dCaseData.getParamEnName(this.filename,this.sheetid,paramStartRowNum, paramStartColNum);
-    	List<List<String>> paramValueList= dCaseData.getParamValue(this.filename,this.sheetid,paramStartRowNum+1,paramStartColNum,paramIsrunColNum);
+    	List<String> paramNameList= dCaseData.getParamEnName(this.filename,this.sheetid,paramNameStartRowNum, paramStartColNum);
+    	List<List<String>> paramValueList= dCaseData.getParamValue(this.filename,this.sheetid,paramValueStartRowNum,paramValueEndRowNum,paramStartColNum,paramIsrunColNum);
 //    	System.out.println("paramStartRowNum+1:"+paramStartRowNum+1);
 //    	System.out.println("paramStartColNum:"+paramStartColNum);
 //    	System.out.println("paramIsrunColNum:"+paramIsrunColNum);

@@ -15,8 +15,10 @@ public class ReadPropertiesParam {
 	 public static  String url = bundle.getString("test.ra.url");
 	 public static String className = bundle.getString("test.ra.ca_class");
 	 public static String methodName = bundle.getString("test.ra.ca_class_method");
-	 public static int paramStartRowNum = Integer.parseInt(bundle.getString("test.ra.param.start.row"));
-	 public static int paramEndRowNum = Integer.parseInt(bundle.getString("test.ra.param.end.row"));
+	 public static int paramNameStartRowNum = Integer.parseInt(bundle.getString("test.ra.param.name.start.row")); //测试用例参数名开始行
+	 public static int paramNameEndRowNum = Integer.parseInt(bundle.getString("test.ra.param.name.end.row"));    //测试用例参数名结束行
+	 public static int paramValueStartRowNum = Integer.parseInt(bundle.getString("test.ra.param.value.start.row"));//测试用例参数值开始行
+	 public static int paramValuEndRowNum = Integer.parseInt(bundle.getString("test.ra.param.value.end.row")); //测试用例参数值结束行
 	 public static int paramStartColNum = Integer.parseInt(bundle.getString("test.ra.param.start.col"));
 	 public static int paramIsrunColNum = Integer.parseInt(bundle.getString("test.ra.param.isrun.col"));
 	 public static String excelPath = bundle.getString("test.ra.excel.path");

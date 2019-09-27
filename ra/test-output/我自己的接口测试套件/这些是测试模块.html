@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 30 14:23:48 CST 2019</td>
+<td>Started on:</td><td>Thu Sep 26 17:10:24 CST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (724 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (634 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.tsa.ra.testcase.RaTestCase.caTest()'><b>caTest</b><br>Test class: com.tsa.ra.testcase.RaTestCase</td>
-<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
+<td><div><pre>java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: 1
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
-Caused by: java.lang.NullPointerException
-	at com.tsa.ra.dealdata.DealCaseData.getParamValue(DealCaseData.java:63)
-	at com.tsa.ra.dealdata.GetMapParam.getParamKeyValue(GetMapParam.java:39)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.tsa.ra.dealdata.DealCaseData.getParamEnName(DealCaseData.java:23)
+	at com.tsa.ra.dealdata.GetMapParam.getParamKeyValue(GetMapParam.java:38)
 	at com.tsa.ra.dealdata.ExcelDataHeleper.dataMethod(ExcelDataHeleper.java:27)
 	... 25 more
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1042786867", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1042786867'><pre>java.lang.RuntimeException: java.lang.NullPointerException
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace769432223", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace769432223'><pre>java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: 1
 	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
 	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:820)
@@ -111,9 +111,9 @@ Caused by: java.lang.NullPointerException
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at com.tsa.ra.dealdata.DealCaseData.getParamValue(DealCaseData.java:63)
-	at com.tsa.ra.dealdata.GetMapParam.getParamKeyValue(GetMapParam.java:39)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.tsa.ra.dealdata.DealCaseData.getParamEnName(DealCaseData.java:23)
+	at com.tsa.ra.dealdata.GetMapParam.getParamKeyValue(GetMapParam.java:38)
 	at com.tsa.ra.dealdata.ExcelDataHeleper.dataMethod(ExcelDataHeleper.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
