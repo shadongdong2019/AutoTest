@@ -61,7 +61,7 @@ public class DealCaseData {
         //List<Object> caseAllParamValueList=new ArrayList<Object>();
         List<List<String>> caseAllParamValueList=new ArrayList<List<String>>();
         int endRowNum =0;
-        if(paramRowNumEnd<alldata.length) {
+        if(paramRowNumEnd>0 && paramRowNumEnd<alldata.length ) {
         	endRowNum = paramRowNumEnd;
         }else {
         	endRowNum = alldata.length;
@@ -69,18 +69,24 @@ public class DealCaseData {
         	
         for(int i=paramRowNumStart;i<endRowNum;i++){
         	List<String> caseParamValueList=new ArrayList<String>();
-        	String isRun = (String) alldata[i][1];
+        	String isRun = (String) alldata[i][isRunNum];
+//        	System.out.println("第"+i+"行："+isRun);
+//        	System.out.println("是否运行值："+isRun.toLowerCase());
         	if(isRun.toLowerCase().equals("yes")){
 	            for(int j=paramColNum;j<alldata[i].length;j++){
 	                String paramValue = (String) alldata[i][j];
 	                caseParamValueList.add(paramValue);
-	               // System.out.println(caseParamValueList);
+//	                System.out.println("第"+i+"行,第"+j+"列："+paramValue);
+//	                System.out.println(caseParamValueList);
 	            }
 	            caseAllParamValueList.add(caseParamValueList);
             }
         	
         }
-        System.out.println(caseAllParamValueList);
+//        System.out.println("所有行："+alldata.length);
+//        System.out.println("开始行号："+paramRowNumStart);
+//        System.out.println("结束行号："+endRowNum);
+//        System.out.println("测试用例集合："+caseAllParamValueList);
         return caseAllParamValueList;
     }
 

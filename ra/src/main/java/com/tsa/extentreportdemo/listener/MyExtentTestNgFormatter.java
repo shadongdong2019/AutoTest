@@ -63,6 +63,9 @@ public class MyExtentTestNgFormatter extends ExtentTestNgFormatter {
         //  如果cdn.rawgit.com访问不了，可以设置为：ResourceCDN.EXTENTREPORTS或者ResourceCDN.GITHUB
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
         reporter.attachReporter(htmlReporter, emailReporter);
+        htmlReporter.config().setDocumentTitle("自动化测试报告");
+        htmlReporter.config().setReportName("自动化测试报告"); 
+        
     }
 
     /**
