@@ -9,7 +9,7 @@
       <class name="com.tsa.ra.testcase.RaTestCase">
         <methods>
           <include name="beforeClass"/>
-          <include name="caTest" invocation-numbers="151"/>
+          <include name="cfcaTest" invocation-numbers="21 22 58 59 60 61 77 78"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.tsa.ra.testcase.RaTestCase -->

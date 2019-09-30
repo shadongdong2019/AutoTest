@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [CA接口测试用例]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CFCA接口测试用例]">
   <listeners>
     <listener class-name="com.tsa.extentreportdemo.listener.MyExtentTestNgFormatter"/>
   </listeners>
@@ -9,10 +9,10 @@
       <class name="com.tsa.ra.testcase.RaTestCase">
         <methods>
           <include name="beforeClass"/>
-          <include name="caTest" invocation-numbers="17 21"/>
+          <include name="cfcaTest" invocation-numbers="21 22 58 59 60 61 77 78"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.tsa.ra.testcase.RaTestCase -->
     </classes>
   </test> <!-- 说明：1 预期结果前面显法false_表示预期结果不是后面的值;2 用例描述中显示值为空时，表示参数值为空字符串(failed) -->
-</suite> <!-- Failed suite [CA接口测试用例] -->
+</suite> <!-- Failed suite [CFCA接口测试用例] -->

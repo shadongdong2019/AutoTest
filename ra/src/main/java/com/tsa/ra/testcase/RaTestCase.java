@@ -29,8 +29,8 @@ public class RaTestCase {
 	@Test(dataProvider="ra_ca_data",dataProviderClass= ExcelDataHeleper.class)
 	public void cfcaTest(Map<String,String> param) throws Exception {
 		String url =callCaInterface();
-    	//CertAPIDemo cert = new CertAPIDemo();
-		CfcaCertAPIDemo cert = new CfcaCertAPIDemo();
+    	CertAPIDemo cert = new CertAPIDemo();
+		//CfcaCertAPIDemo cert = new CfcaCertAPIDemo();
 		String IsRun = "";
 		String CaseID = "";
 		String TestTarget = "";
