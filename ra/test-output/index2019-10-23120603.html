@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/6d3843c29c354373fafad29c03a1a89b7e06c374/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>自动化测试报告</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>自动化测试报告</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Oct 23, 2019 12:06:03 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.6</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='11.111%'><span class='strong'>1</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='88.889%'>8</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>CFCA接口测试用例</span>
+						<span class='test-time'>Oct 23, 2019 12:06:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 23, 2019 12:06:03 PM</span>
+	<span class='label end-time'>Oct 23, 2019 12:06:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+470ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1  pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>说明：1 预期结果前面显法false_表示预期结果不是后面的值;2 用例描述中显示值为空时，表示参数值为空字符串</div>						
+						<span class='node-time'>Oct 23, 2019 12:06:03 PM</span>
+						<span class='node-duration'>0h 0m 1s+466ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>Passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>cfcaTest</div>						
+						<span class='node-time'>Oct 23, 2019 12:06:04 PM</span>
+						<span class='node-duration'>0h 0m 0s+800ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>用例编号=CA_159</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>测试目的=申请成功</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>用例描述=必填参数periodType值为year,period为1,caOrg为空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>接口请求地址=http://101.201.239.215:18088/service/CertAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>PIN码=51b108418653c69f0f040ba4e9057d0f</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>请求参数={password=111222, username=北京技术服务有限公司, subject=o=北京技术服务有限公司111,ou=测试专用111,cn=23464567575675634XE111-北京技术服务有限公司111, period=1, periodType=year, cardType=身份证, cardNumber=110111198805131234, email=tsa@tsa.cn}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>预期结果="code":"0"</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>响应结果={"code":"0","param":"{\"caOrg\":\"ECCA\",\"code\":\"0\",\"pfx\":\"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\",\"serialNumber\":\"1aa2d86a29ea94652d0a35abbe797ae7\",\"sign\":\"1aa2d86a29ea94652d0a35abbe797ae7\"}","sign":"0e54dbba058bb99172804ae5ed5a7f5a"}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>12:06:05 PM</td>
+													<td class='step-details'>Passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>9</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Oct 23, 2019 12:06:03 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Oct 23, 2019 12:06:05 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1,629ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 1,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 1,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 8,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/5ed7b0c339b51aa347b44ccaa2e2ff29905b2f9f/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

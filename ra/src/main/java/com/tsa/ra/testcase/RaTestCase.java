@@ -1,8 +1,9 @@
 package com.tsa.ra.testcase;
 
-import java.util.ArrayList;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -10,12 +11,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.alibaba.fastjson.JSONObject;
 import com.tsa.ra.dealdata.ExcelDataHeleper;
 import com.tsa.ra.log.Log;
 
 import cn.tsa.CertAPIDemo;
 import cn.tsa.certapi.webservice.cfca.CfcaCertAPIDemo;
+
+
 public class RaTestCase {
 	String[] removeArray = new String[]{"IsRun","TestTarget","CaseDesc","ExpectRes","ExpectValue","ResultValue","IsPass"};
 	
@@ -77,10 +79,10 @@ public class RaTestCase {
 		if(is_false.equals("false")) {
 			ExpectValue = ExpectValue.split("_")[1];
 			Boolean t =resString.contains(ExpectValue);
-			Assert.assertEquals(resString.contains(ExpectValue), false);
+			AssertJUnit.assertEquals(resString.contains(ExpectValue), false);
 		}else {
 			Boolean t =resString.contains(ExpectValue);
-			Assert.assertEquals(resString.contains(ExpectValue), true);
+			AssertJUnit.assertEquals(resString.contains(ExpectValue), true);
 		}
 
 		//Assert.assertNotEquals("", resString);

@@ -8,7 +8,11 @@ import java.util.ResourceBundle;
 
 import com.tsa.ra.dealdata.GetMapParam;
 
-import cn.tsa.*;
+import cn.tsa.CertAPIDemo;
+
+
+
+
 public class RaInterfaceDeal {
 //	 ReadPropertiesParam rp = new ReadPropertiesParam("ca");
 	 public static String url = ReadPropertiesParam.url;
